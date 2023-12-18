@@ -19,6 +19,7 @@ class GroupCreateView(CreateView):
         except Exception as e:
             print("Could not be created topic",str(e))
             return super().form_invalid(form)
+        self.object.topic_arn = topic
         self.object.save()
         for person in form.cleaned_data['persons']:
             try:

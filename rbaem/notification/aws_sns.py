@@ -23,15 +23,15 @@ def subscribe_to_topic(topic_arn, endpoint, protocol='sms'):
     return response['SubscriptionArn']
 #
 #
-# def send_message_to_topic(topic_arn, message):
-#     client = boto3.client('sns', region_name=settings.AWS_REGION)
-#
-#     response = client.publish(
-#         TopicArn=topic_arn,
-#         Message=message,
-#     )
-#
-#     return response['MessageId']
+def send_message_to_topic(topic_arn, message):
+    client = boto3.client('sns', region_name=settings.AWS_REGION)
+
+    response = client.publish(
+        TopicArn=topic_arn,
+        Message=message,
+    )
+
+    return response['MessageId']
 
 def send_sms(message, phone_number):
     client = boto3.client('sns', region_name=settings.AWS_REGION)
