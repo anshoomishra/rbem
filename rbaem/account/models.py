@@ -6,6 +6,7 @@ from django.utils import timezone
 
 class AssemblyUser(AbstractUser):
     phone_number = models.IntegerField(null=True)
+    phone_verified = models.BooleanField(default=False)
 
     def __str__(self):
         return self.username

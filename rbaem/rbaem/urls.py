@@ -16,9 +16,10 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path,include
-
+from .views import HomePage
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('notification/', include('notification.urls')),
     path('account/', include('account.urls')),
+    path('', HomePage.as_view()),
 ]
