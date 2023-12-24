@@ -10,9 +10,16 @@
 
 
             </div>
-            <div class="button">
+            <div class="button mb-2">
             <a class="btn btn-primary" href="{% url 'account:create-group' %}">groups</a>
-                </div>
+
+            </div>
+            <div class="button">
+            <a class="btn btn-primary" href="{% url 'account:all-users' %}">users</a>
+            </div>
+            <div class="button">
+            <a class="btn btn-primary" href="{% url 'account:create-user' %}">create user</a>
+            </div>
         </div>
     </div>
 {% endblock %}

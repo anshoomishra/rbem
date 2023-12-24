@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="container">
+  <div class="row">
+     <div class="col-md-6 col-10">
+        <table class="table table-bordered">
+  <thead>
+    <tr>
+      <th scope="col">Username</th>
+      <th scope="col">Booth Name</th>
+      <th scope="col">Approved</th>
+      <th scope="col">Phone Verified</th>
+    </tr>
+  </thead>
+  <tbody>
+  {% for user in users %}
+    <tr>
+      <th scope="col">{{user.username}}</th>
+      <td scope="col"> {{user.booth_name}} </td>
+      <td scope="col">{{user.is_approved}}</td>
+      <td scope="col">{{user.phone_verified}}</td>
+    </tr>
+  {% endfor %}
+  </tbody>
+</table>
+     </div>
+     <div class="col-md-6 col-10">
+       <ul class="list-group">
+  <li class="list-group-item">An item</li>
+  <li class="list-group-item">A second item</li>
+  <li class="list-group-item">A third item</li>
+  <li class="list-group-item">A fourth item</li>
+  <li class="list-group-item">And a fifth one</li>
+</ul>
+     </div>
+   </div>
+</div>
+
+{% endblock %}
